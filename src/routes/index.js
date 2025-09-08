@@ -5,11 +5,11 @@ const bookRoutes = require("./bookRoutes");
 // OR
 // const router = require("express").Router
 
-//localhost/3000/api/v1 because of index.js src
+// using app/v1 route
 router.get("/", (request, response) => {
   response
     .status(200)
-    .json({ message: `${request.method} verb to the API`, success: true });
+    .json({ message: "using file src/routes/index", success: true });
 });
 
 router.use("/books", bookRoutes);
